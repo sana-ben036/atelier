@@ -74,7 +74,7 @@ namespace ConsoleApp1
 
             // ::::::::::::::Les collections ::::::::::::::::::::::::::::::::::::::::::::::::
 
-            string[] test = new string[4];
+            string[] newList = new string[4];
             List<string> listMois = new List<string> { "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre" };
            
             Console.WriteLine(listMois[2]);   // la valeur de ligne 3
@@ -102,8 +102,8 @@ namespace ConsoleApp1
             
            
             Console.WriteLine("nouvel list copiée :");
-            listMois.CopyTo(0, test, 0, 4);
-            foreach (string i in test)         // parcourir
+            listMois.CopyTo(0, newList, 0, 4);
+            foreach (string i in newList)         // parcourir
             {
                 Console.WriteLine(i);
             }
