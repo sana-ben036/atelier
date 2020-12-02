@@ -102,7 +102,7 @@ namespace ConsoleApp1
             
            
             Console.WriteLine("nouvel list copiée :");
-            listMois.CopyTo(0, newList, 0, 4);
+            listMois.CopyTo(0, newList, 0, 4);     // copier 4 element vers une nouvelle liste
             foreach (string i in newList)         // parcourir
             {
                 Console.WriteLine(i);
