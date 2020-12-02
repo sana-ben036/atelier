@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -71,8 +72,41 @@ namespace ConsoleApp1
 
 
 
-            // ::::::::::::::les lists:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+            // ::::::::::::::Les collections ::::::::::::::::::::::::::::::::::::::::::::::::
 
+            string[] test = new string[4];
+            List<string> listMois = new List<string> { "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre" };
+           
+            Console.WriteLine(listMois[2]);   // la valeur de ligne 3
+            Console.WriteLine(listMois[5]);   // la valeur de l'indice 5
+            
+            foreach (string mois in listMois)         // parcourir la list
+            {
+                Console.WriteLine(mois);
+            }
+
+            listMois[7] = "août ";           // modifier "aout" par "août "
+            listMois.RemoveAt(2);                   // supprimer troixieme element de list
+            listMois.Remove("avril");               // supprimer un element par son nom
+            listMois.Insert(0, "test");            // inserer un element sur possition 0
+            int indice = listMois.IndexOf("decembre"); // chercher l'indice d'un element
+            Console.WriteLine(indice);
+            listMois.Sort();                        // trier list
+
+            Console.WriteLine("list final :");
+            foreach (string mois in listMois)         // parcourir l 'ordre
+            {
+                Console.WriteLine(mois);
+            }
+            
+            
+           
+            Console.WriteLine("nouvel list copiée :");
+            listMois.CopyTo(0, test, 0, 4);
+            foreach (string i in test)         // parcourir
+            {
+                Console.WriteLine(i);
+            }
 
 
             // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
