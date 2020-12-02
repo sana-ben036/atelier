@@ -68,12 +68,8 @@ namespace ConsoleApp1
             // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-            // ::::::::::::::les fonctions:::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
             // ::::::::::::::Les collections ::::::::::::::::::::::::::::::::::::::::::::::::
-
+            /*
             string[] newList = new string[4];
             List<string> listMois = new List<string> { "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre", "octobre", "novembre", "decembre" };
            
@@ -108,8 +104,86 @@ namespace ConsoleApp1
                 Console.WriteLine(i);
             }
 
-
+            */
             // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+            // ::::::::::::::les fonctions:::::::::::::::::::::::::::::::::::::::::::::::::::
+
+            int Add(int x, int y) // fonction +
+            {
+                int r = x + y;
+                return r;
+            }
+
+
+            int Sous(int x, int y)  // fonction -
+            {
+                int r = x - y;
+                return r;
+            }
+
+            int Rest(int x, int y)    // fonction %
+            {
+                int r = x % y;
+                return r;
+            }
+
+            int Mult(int x, int y)     // fonction *
+            {
+                int r = x * y;
+                return r;
+            }
+
+            float Div(int x, int y)      // fonction /
+            {
+                float r = x / y;
+                return r;
+
+            }
+            Console.WriteLine("entrer un premier nombre");
+             int x = int.Parse(Console.ReadLine());
+            Console.WriteLine("entrer un deuxieme nombre");
+            int y = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("entrer l'operation souhaité : Add, Div, Sous, Rest, Mult");
+            string opt = Console.ReadLine();
+
+            Console.WriteLine("RESULTAT EST");
+            if (opt == "Add")
+            {
+                Console.WriteLine(Add(x, y));
+            }
+            else if (opt == "Sous")
+            {
+                Console.WriteLine(Sous(x, y));
+            }
+            else if (opt == "Mult")
+            {
+                Console.WriteLine(Mult(x, y));
+            }
+            else if (opt == "Rest")
+            {
+                Console.WriteLine(Rest(x, y));
+            }
+            else if (opt == "Div" && (x!=0))
+            {
+                Console.WriteLine(Div(x, y));
+            }else
+            {
+                Console.WriteLine("svp entrer un nombre different de zero");
+                x = int.Parse(Console.ReadLine());
+                Console.WriteLine(Div(x, y));
+
+            }
+             
+
+
+
+
+
+
+
+
         }
     }
 }
