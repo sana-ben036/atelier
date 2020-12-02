@@ -93,7 +93,7 @@ namespace ConsoleApp1
             Console.WriteLine(indice);
             listMois.Sort();                        // trier list
 
-            Console.WriteLine("list final :");
+            Console.WriteLine("list final apres l'ordre:");
             foreach (string mois in listMois)         // parcourir l 'ordre
             {
                 Console.WriteLine(mois);
